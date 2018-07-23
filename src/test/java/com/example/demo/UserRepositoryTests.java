@@ -18,17 +18,17 @@ public class UserRepositoryTests {
 
     @Test
     public void test() throws Exception {
-//        User user = new User();
-//        user.setGender(true);
-//        user.setName("allen");
-//        user.setAge(10);
-//        user.setNickName("allenxxxx");
-//        userDao.save(user);
-//
-//        User user1 = new User();
-//        user1.setName("fitz");
-//        user1.setAge(20);
-//        userDao.save(user1);
+        User user = new User();
+        user.setGender(true);
+        user.setName("allen");
+        user.setAge(10);
+        user.setNickName("allenxxxx");
+        userDao.save(user);
+
+        User user1 = new User();
+        user1.setName("fitz");
+        user1.setAge(20);
+        userDao.save(user1);
 
         Assert.assertEquals(2, userDao.findAll().size());
         Assert.assertEquals("fitz", userDao.findById(2L).getName());
