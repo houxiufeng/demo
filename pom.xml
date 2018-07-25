@@ -57,7 +57,7 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
-		<!--这个厉害了，可以添加js,css的jar-->
+		<!--这个厉害了可以添加js,css的jar-->
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
