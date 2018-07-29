@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 菜单映射 -->
+<mapper namespace="com.example.demo.dao.User2Dao">
+
+	<select id="findByName" resultType="com.example.demo.domain.User">
+		select * from user where name = #{name} limit 1
+	</select>
+
+	<select id="findById" resultType="com.example.demo.domain.User">
+		select * from user where id = #{id}
+	</select>
+
+	<select id="findByNameAndGender" resultType="com.example.demo.domain.User">
+		select * from user where name = #{name} and gender = #{gender} limit 1
+	</select>
+
+	<select id="findByAge" resultType="com.example.demo.domain.User">
+		select * from user where age = #{age}
+	</select>
+
+	<insert id="insert" keyProperty="id" useGeneratedKeys="true">
+		insert into user(name, age, gender, nick_name) values(#{name},#{age},#{gender},#{nickName})
+	</insert>
+
+	<update id="update">
+		update user
+		<set>
+			<if test="nickName != null and nickName != ''">nick_name=#{nickName},</if>
+			<if test="name != null">name=#{name},</if>
+			<if test="age != null">age=#{age},</if>
+			<if test="gender != null">gender=#{gender},</if>
+		</set>
+		where id = #{id}
+	</update>
+
+	<delete id="delete">
+		delete from user where id=#{id}
+	</delete>
+
+	<select id="findUserInfos" resultType="com.example.demo.domain.UserInfo">
+		select a.*, b.name country_name, b.code, b.poi from user a left join country b on a.country_id = b.id
+		<where>
+			<if test="name != null and name !=''">a.name=#{name}</if>
+			<if test="code != null and code !=''">and b.code=#{code}</if>
+		</where>
+	</select>
+
+</mapper>
