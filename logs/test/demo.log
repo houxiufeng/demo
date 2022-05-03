@@ -1,0 +1,81 @@
+[INFO ][2022-05-02 00:00:06.584+0800][DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ][2022-05-02 00:00:06.586+0800][FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+[INFO ][2022-05-02 00:00:06.588+0800][FrameworkServlet.java:547] Completed initialization in 1 ms
+[INFO ][2022-05-02 00:03:25.762+0800][StartupInfoLogger.java:55] Starting DemoApplication using Java 1.8.0_321 on fitz-nuc with PID 10492 (D:\homework\demo\target\classes started by fitz in D:\homework\demo)
+[INFO ][2022-05-02 00:03:25.770+0800][SpringApplication.java:663] The following profiles are active: test
+[INFO ][2022-05-02 00:03:26.941+0800][TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+[INFO ][2022-05-02 00:03:26.959+0800][DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ][2022-05-02 00:03:26.959+0800][DirectJDKLog.java:173] Starting service [Tomcat]
+[INFO ][2022-05-02 00:03:26.959+0800][DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+[INFO ][2022-05-02 00:03:27.030+0800][DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+[INFO ][2022-05-02 00:03:27.030+0800][ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1212 ms
+[INFO ][2022-05-02 00:03:28.007+0800][DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+[INFO ][2022-05-02 00:03:28.027+0800][TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ][2022-05-02 00:03:28.037+0800][StartupInfoLogger.java:61] Started DemoApplication in 2.799 seconds (JVM running for 3.224)
+[INFO ][2022-05-02 00:03:28.037+0800][ApplicationStartupRunner.java:21] ApplicationStartupRunner started, args:[--server.port=8080, --spring.profiles.active=test]
+[INFO ][2022-05-02 00:03:33.572+0800][DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ][2022-05-02 00:03:33.572+0800][FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+[INFO ][2022-05-02 00:03:33.573+0800][FrameworkServlet.java:547] Completed initialization in 1 ms
+[INFO ][2022-05-02 00:05:39.650+0800][UserController.java:56] controller listUsers userDto:UserDto(id=null, name=allenxxx, age=null, gender=null)
+[INFO ][2022-05-02 00:07:48.631+0800][StartupInfoLogger.java:55] Starting DemoApplication using Java 1.8.0_321 on fitz-nuc with PID 14028 (D:\homework\demo\target\classes started by fitz in D:\homework\demo)
+[INFO ][2022-05-02 00:07:48.639+0800][SpringApplication.java:663] The following profiles are active: test
+[INFO ][2022-05-02 00:07:49.742+0800][TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+[INFO ][2022-05-02 00:07:49.758+0800][DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ][2022-05-02 00:07:49.758+0800][DirectJDKLog.java:173] Starting service [Tomcat]
+[INFO ][2022-05-02 00:07:49.758+0800][DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+[INFO ][2022-05-02 00:07:49.830+0800][DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+[INFO ][2022-05-02 00:07:49.830+0800][ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1135 ms
+[INFO ][2022-05-02 00:07:50.834+0800][DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+[INFO ][2022-05-02 00:07:50.858+0800][TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ][2022-05-02 00:07:50.867+0800][StartupInfoLogger.java:61] Started DemoApplication in 2.758 seconds (JVM running for 3.223)
+[INFO ][2022-05-02 00:07:50.867+0800][ApplicationStartupRunner.java:21] ApplicationStartupRunner started, args:[--server.port=8080, --spring.profiles.active=test]
+[INFO ][2022-05-02 00:07:56.646+0800][DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ][2022-05-02 00:07:56.647+0800][FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+[INFO ][2022-05-02 00:07:56.647+0800][FrameworkServlet.java:547] Completed initialization in 0 ms
+[INFO ][2022-05-02 00:07:56.674+0800][UserController.java:56] controller listUsers userDto:UserDto(id=null, name=allenxxx, age=null, gender=null)
+[INFO ][2022-05-02 00:40:44.392+0800][StartupInfoLogger.java:55] Starting DemoApplication using Java 1.8.0_321 on fitz-nuc with PID 13468 (D:\homework\demo\target\classes started by fitz in D:\homework\demo)
+[INFO ][2022-05-02 00:40:44.400+0800][SpringApplication.java:663] The following profiles are active: test
+[INFO ][2022-05-02 00:40:45.550+0800][TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+[INFO ][2022-05-02 00:40:45.566+0800][DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ][2022-05-02 00:40:45.566+0800][DirectJDKLog.java:173] Starting service [Tomcat]
+[INFO ][2022-05-02 00:40:45.566+0800][DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+[INFO ][2022-05-02 00:40:45.631+0800][DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+[INFO ][2022-05-02 00:40:45.631+0800][ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1175 ms
+[INFO ][2022-05-02 00:40:46.558+0800][DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+[INFO ][2022-05-02 00:40:46.579+0800][TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ][2022-05-02 00:40:46.589+0800][StartupInfoLogger.java:61] Started DemoApplication in 2.723 seconds (JVM running for 3.114)
+[INFO ][2022-05-02 00:40:46.589+0800][ApplicationStartupRunner.java:21] ApplicationStartupRunner started, args:[--server.port=8080, --spring.profiles.active=test]
+[INFO ][2022-05-02 00:41:01.004+0800][DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ][2022-05-02 00:41:01.004+0800][FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+[INFO ][2022-05-02 00:41:01.005+0800][FrameworkServlet.java:547] Completed initialization in 0 ms
+[INFO ][2022-05-02 00:41:01.072+0800][UserController.java:57] {"userServiceImpl":{}}
+[INFO ][2022-05-02 00:41:01.072+0800][UserController.java:58] controller listUsers userDto:UserDto(id=null, name=allenxxx, age=null, gender=null)
+[INFO ][2022-05-02 00:41:01.144+0800][HikariDataSource.java:110] HikariPool-1 - Starting...
+[INFO ][2022-05-02 00:41:01.394+0800][HikariDataSource.java:123] HikariPool-1 - Start completed.
+[INFO ][2022-05-02 00:41:01.447+0800][UserServiceImpl.java:30] userService listUser:[User(id=2, name=allenxxx, age=10, gender=true, createTime=Fri Mar 18 15:36:05 CST 2022, updateTime=Sun May 01 08:15:53 CST 2022), User(id=5, name=allenxxx, age=37, gender=false, createTime=Sun May 01 08:38:30 CST 2022, updateTime=Sun May 01 08:38:30 CST 2022)]
+[INFO ][2022-05-02 00:42:37.163+0800][UserController.java:57] {"userServiceImpl":{}}
+[INFO ][2022-05-02 00:42:55.557+0800][UserController.java:58] controller listUsers userDto:UserDto(id=null, name=allenxxx, age=null, gender=null)
+[INFO ][2022-05-02 00:42:55.566+0800][UserServiceImpl.java:30] userService listUser:[User(id=2, name=allenxxx, age=10, gender=true, createTime=Fri Mar 18 15:36:05 CST 2022, updateTime=Sun May 01 08:15:53 CST 2022), User(id=5, name=allenxxx, age=37, gender=false, createTime=Sun May 01 08:38:30 CST 2022, updateTime=Sun May 01 08:38:30 CST 2022)]
+[INFO ][2022-05-02 00:53:46.079+0800][HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+[INFO ][2022-05-02 00:53:46.079+0800][HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+[INFO ][2022-05-02 00:54:28.918+0800][StartupInfoLogger.java:55] Starting DemoApplication using Java 1.8.0_321 on fitz-nuc with PID 6336 (D:\homework\demo\target\classes started by fitz in D:\homework\demo)
+[INFO ][2022-05-02 00:54:28.918+0800][SpringApplication.java:663] The following profiles are active: test
+[INFO ][2022-05-02 00:54:30.074+0800][TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+[INFO ][2022-05-02 00:54:30.084+0800][DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ][2022-05-02 00:54:30.084+0800][DirectJDKLog.java:173] Starting service [Tomcat]
+[INFO ][2022-05-02 00:54:30.084+0800][DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+[INFO ][2022-05-02 00:54:30.146+0800][DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+[INFO ][2022-05-02 00:54:30.154+0800][ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1172 ms
+[INFO ][2022-05-02 00:54:31.090+0800][DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+[INFO ][2022-05-02 00:54:31.110+0800][TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ][2022-05-02 00:54:31.112+0800][StartupInfoLogger.java:61] Started DemoApplication in 2.748 seconds (JVM running for 3.179)
+[INFO ][2022-05-02 00:54:31.120+0800][ApplicationStartupRunner.java:21] ApplicationStartupRunner started, args:[--server.port=8080, --spring.profiles.active=test]
+[INFO ][2022-05-02 00:54:38.622+0800][DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ][2022-05-02 00:54:38.622+0800][FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+[INFO ][2022-05-02 00:54:38.623+0800][FrameworkServlet.java:547] Completed initialization in 1 ms
+[INFO ][2022-05-02 00:55:05.660+0800][UserController.java:58] controller listUsers userDto:UserDto(id=null, name=allenxxx, age=null, gender=null)
+[INFO ][2022-05-02 00:55:05.748+0800][HikariDataSource.java:110] HikariPool-1 - Starting...
+[INFO ][2022-05-02 00:55:05.947+0800][HikariDataSource.java:123] HikariPool-1 - Start completed.
+[INFO ][2022-05-02 00:55:05.998+0800][UserServiceImpl.java:30] userService listUser:[User(id=2, name=allenxxx, age=10, gender=true, createTime=Fri Mar 18 15:36:05 CST 2022, updateTime=Sun May 01 08:15:53 CST 2022), User(id=5, name=allenxxx, age=37, gender=false, createTime=Sun May 01 08:38:30 CST 2022, updateTime=Sun May 01 08:38:30 CST 2022)]
+[INFO ][2022-05-02 00:55:40.855+0800][HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+[INFO ][2022-05-02 00:55:40.863+0800][HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
