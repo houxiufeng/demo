@@ -1,8 +1,22 @@
 package com.example.demo;
 
 import cn.hutool.json.JSONUtil;
+import com.example.demo.common.backoff.BackOff;
+import com.example.demo.common.backoff.ExponentialBackOff;
+import com.example.demo.common.backoff.FixedBackOff;
+import com.example.demo.common.backoff.Retry;
 import com.example.demo.mapper.ESUserRepository;
 import com.example.demo.vo.ESUserInfo;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import org.elasticsearch.action.DocWriteRequest;
+import org.elasticsearch.action.bulk.BulkItemResponse;
+import org.elasticsearch.action.bulk.BulkRequest;
+import org.elasticsearch.action.bulk.BulkResponse;
+import org.elasticsearch.action.index.IndexRequest;
+import org.elasticsearch.client.RequestOptions;
+import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.RangeQueryBuilder;
@@ -21,9 +35,18 @@ import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.data.elasticsearch.core.query.Query;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 @SpringBootTest(classes = DemoApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class Estest {
@@ -33,6 +56,12 @@ public class Estest {
 
     @Autowired
     private ElasticsearchRestTemplate esRestTemplate;
+
+    @Autowired
+    private RestHighLevelClient elasticsearchClient;
+
+//    private BackOff backOff = ExponentialBackOff.getDefault();
+    private BackOff backOff = new FixedBackOff(1000L, 5000L);
 
     @Test
     public void test1() throws Exception {
@@ -151,6 +180,88 @@ public class Estest {
         hitList.forEach(hit -> {
             System.out.println("返回数据：" + hit.getContent().toString());
         });
+    }
+
+    @Test
+    public void test9() throws Exception {
+        Map<String, Object> doc1 = Maps.newHashMap();
+        doc1.put("name","x1");
+        doc1.put("age",11);
+        Map<String, Object> doc2 = Maps.newHashMap();
+        doc2.put("name","x2");
+        doc2.put("age",12);
+        Map<String, Object> doc3 = Maps.newHashMap();
+        doc3.put("name","x3");
+        doc3.put("age","xxad");
+        IndexRequest indexRequest1 = new IndexRequest("user_info").id("5").source(doc1);
+        IndexRequest indexRequest2 = new IndexRequest("user_info").id("6").source(doc2);
+        IndexRequest indexRequest3 = new IndexRequest("user_info").id("7").source(doc3);
+        BulkRequest request = new BulkRequest();
+        request.add(indexRequest1);
+        request.add(indexRequest2);
+        request.add(indexRequest3);
+//        List<String> ids = Lists.newArrayList("1","3","5");
+//        request.requests().removeIf(x -> !ids.contains(x.id()));
+//        System.out.println(request);
+
+        BulkResponse response = elasticsearchClient.bulk(request, RequestOptions.DEFAULT);
+
+        List<String> failedIds = Arrays.stream(response.getItems()).filter(BulkItemResponse::isFailed).map(x -> x.getId()).collect(Collectors.toList());
+
+        BulkResponse bulkItemResponses = retryFailure(failedIds, request);
+
+        System.out.println(bulkItemResponses);
+    }
+
+    private BulkResponse retryFailure(List<String> failedIds, BulkRequest bulkRequest) throws IOException {
+        bulkRequest.requests().removeIf(x -> !failedIds.contains(x.id()));
+        BulkResponse response = elasticsearchClient.bulk(bulkRequest, RequestOptions.DEFAULT);
+        return response;
+    }
+
+    @Test
+    public void test10() {
+        Map<String, Object> doc1 = Maps.newHashMap();
+        doc1.put("name","x1");
+        doc1.put("age",1111);
+        Map<String, Object> doc2 = Maps.newHashMap();
+        doc2.put("name","x2");
+        doc2.put("age",1222);
+        Map<String, Object> doc3 = Maps.newHashMap();
+        doc3.put("name","x3");
+        doc3.put("age",333);
+        IndexRequest indexRequest1 = new IndexRequest("user_info").id("5").source(doc1);
+        IndexRequest indexRequest2 = new IndexRequest("user_info").id("6").source(doc2);
+        IndexRequest indexRequest3 = new IndexRequest("user_info").id("7").source(doc3);
+        BulkRequest request = new BulkRequest();
+        request.add(indexRequest1);
+        request.add(indexRequest2);
+        request.add(indexRequest3);
+        BulkResponse bulkItemResponses = retryBulkInsert(request);
+        System.out.println(bulkItemResponses.getItems().length);
+
+    }
+    private BulkResponse retryBulkInsert(BulkRequest toBeSubmitted) {
+        AtomicInteger retry = new AtomicInteger(0);
+        Predicate<BulkResponse> predicate = bulkResponse -> {
+            System.out.println("-------retry:" + retry.get());
+            boolean b = Objects.nonNull(bulkResponse);
+            if(!b) {
+                return false;
+            }
+            List<String> failedIds = Arrays.stream(bulkResponse.getItems())
+                    .filter(BulkItemResponse::isFailed)
+                    .map(x -> x.getId())
+                    .collect(Collectors.toList());
+            if (failedIds.size() > 0 && retry.get() < 3) {
+                retry.incrementAndGet();
+                toBeSubmitted.requests().removeIf(x -> !failedIds.contains(x.id()));
+                return false;
+            }
+            return true;
+        };
+
+        return Retry.untilSuccess(backOff, TimeUnit.MILLISECONDS,() -> elasticsearchClient.bulk(toBeSubmitted, RequestOptions.DEFAULT), predicate);
     }
 
 

@@ -9,6 +9,7 @@ import com.example.demo.event.UserEvent;
 import com.example.demo.mapper.UserMapper;
 import com.example.demo.po.User;
 import com.example.demo.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
-    private static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+//    private static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     private UserMapper userMapper;
@@ -30,7 +32,7 @@ public class UserServiceImpl implements UserService {
         QueryWrapper<User> userQueryWrapper = new QueryWrapper<>(user);
         List<User> users = userMapper.selectList(userQueryWrapper);
 
-        logger.info("userService listUser:{}", users);
+        log.info("userService listUser:{}", users);
         return users;
     }
 
@@ -46,7 +48,7 @@ public class UserServiceImpl implements UserService {
     public User addUser(UserDto userDto) {
         User user = Convert.convert(User.class, userDto);
         saveUser(user);
-        logger.info("userService addUser:{}", user);
+        log.info("userService addUser:{}", user);
         SpringContextUti.publish(new UserEvent(this, user, "add"));
         return user;
     }
