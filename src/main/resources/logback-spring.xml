@@ -2,7 +2,7 @@
 <configuration scan="true" scanPeriod="60 seconds">
 
     <property name="LOG_PATTERN" value="[%-5level][%d{YYYY-MM-dd HH:mm:ss.SSS+0800}][%F:%line] %msg%n"/>
-    <springProperty name="LOG_PATH" source="logging.path" defaultValue="./logs" />
+    <springProperty name="LOG_PATH" source="logging.file.path" defaultValue="./logs" />
 
     <!--输出到控制台-->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
