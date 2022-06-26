@@ -1,268 +1,96 @@
-[INFO ][2022-05-24 08:36:01.540+0800][StartupInfoLogger.java:55] Starting DemoApplication using Java 1.8.0_321 on fitz-nuc with PID 8652 (D:\homework\demo\target\classes started by fitz in D:\homework\demo)
-[INFO ][2022-05-24 08:36:01.544+0800][SpringApplication.java:663] The following profiles are active: dev
-[INFO ][2022-05-24 08:36:02.449+0800][RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-[INFO ][2022-05-24 08:36:02.453+0800][RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-[INFO ][2022-05-24 08:36:02.658+0800][RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 197 ms. Found 1 Elasticsearch repository interfaces.
-[INFO ][2022-05-24 08:36:02.664+0800][RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-[INFO ][2022-05-24 08:36:02.666+0800][RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-[INFO ][2022-05-24 08:36:02.677+0800][RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 10 ms. Found 0 Reactive Elasticsearch repository interfaces.
-[INFO ][2022-05-24 08:36:02.696+0800][RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-[INFO ][2022-05-24 08:36:02.697+0800][RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[INFO ][2022-05-24 08:36:02.711+0800][RepositoryConfigurationExtensionSupport.java:349] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.mapper.ESUserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-[INFO ][2022-05-24 08:36:02.712+0800][RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-[INFO ][2022-05-24 08:36:03.500+0800][TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-[INFO ][2022-05-24 08:36:03.511+0800][DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ][2022-05-24 08:36:03.512+0800][DirectJDKLog.java:173] Starting service [Tomcat]
-[INFO ][2022-05-24 08:36:03.512+0800][DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
-[INFO ][2022-05-24 08:36:03.601+0800][DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-[INFO ][2022-05-24 08:36:03.601+0800][ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1996 ms
-[INFO ][2022-05-24 08:36:05.706+0800][VersionInfo.java:62] Version Spring Data Elasticsearch: 4.2.6
-[INFO ][2022-05-24 08:36:05.707+0800][VersionInfo.java:63] Version Elasticsearch Client in build: 7.12.1
-[INFO ][2022-05-24 08:36:05.707+0800][VersionInfo.java:64] Version Elasticsearch Client used: 7.12.1
-[INFO ][2022-05-24 08:36:05.708+0800][VersionInfo.java:72] Version Elasticsearch cluster: 7.6.2
-[INFO ][2022-05-24 08:36:06.668+0800][AbstractConfig.java:361] ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 100
-	auto.offset.reset = latest
-	bootstrap.servers = [192.168.123.127:9002]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-default-group-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = default-group
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 20
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.mechanism = GSSAPI
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 10000
-	socket.connection.setup.timeout.max.ms = 127000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.2
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+[INFO ][2022-06-26 22:18:22.952+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 10736 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:18:22.952+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:18:23.936+0800][ConditionEvaluationReportLoggingListener.java:136] 
 
-[INFO ][2022-05-24 08:36:06.809+0800][AppInfoParser.java:119] Kafka version: 2.7.1
-[INFO ][2022-05-24 08:36:06.809+0800][AppInfoParser.java:120] Kafka commitId: 61dbce85d0d41457
-[INFO ][2022-05-24 08:36:06.809+0800][AppInfoParser.java:121] Kafka startTimeMs: 1653352566806
-[INFO ][2022-05-24 08:36:06.812+0800][KafkaConsumer.java:961] [Consumer clientId=consumer-default-group-1, groupId=default-group] Subscribed to topic(s): testTopic2
-[INFO ][2022-05-24 08:36:06.823+0800][AbstractConfig.java:361] ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 100
-	auto.offset.reset = latest
-	bootstrap.servers = [192.168.123.127:9002]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-default-group-2
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = default-group
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 20
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.mechanism = GSSAPI
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 10000
-	socket.connection.setup.timeout.max.ms = 127000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.2
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[INFO ][2022-06-26 22:20:57.168+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 11276 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:20:57.168+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:20:57.982+0800][ConditionEvaluationReportLoggingListener.java:136] 
 
-[INFO ][2022-05-24 08:36:06.830+0800][AppInfoParser.java:119] Kafka version: 2.7.1
-[INFO ][2022-05-24 08:36:06.830+0800][AppInfoParser.java:120] Kafka commitId: 61dbce85d0d41457
-[INFO ][2022-05-24 08:36:06.831+0800][AppInfoParser.java:121] Kafka startTimeMs: 1653352566830
-[INFO ][2022-05-24 08:36:06.831+0800][KafkaConsumer.java:961] [Consumer clientId=consumer-default-group-2, groupId=default-group] Subscribed to topic(s): testTopic1
-[INFO ][2022-05-24 08:36:06.832+0800][DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-[INFO ][2022-05-24 08:36:06.846+0800][TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path ''
-[INFO ][2022-05-24 08:36:06.855+0800][StartupInfoLogger.java:61] Started DemoApplication in 5.865 seconds (JVM running for 6.913)
-[INFO ][2022-05-24 08:36:06.857+0800][ApplicationStartupRunner.java:21] ApplicationStartupRunner started, args:[--server.port=8080, --spring.profiles.active=dev]
-[INFO ][2022-05-24 08:36:07.504+0800][Metadata.java:279] [Consumer clientId=consumer-default-group-2, groupId=default-group] Cluster ID: 1mIYNeUcQJeStTtGqChwTg
-[INFO ][2022-05-24 08:36:07.504+0800][Metadata.java:279] [Consumer clientId=consumer-default-group-1, groupId=default-group] Cluster ID: 1mIYNeUcQJeStTtGqChwTg
-[INFO ][2022-05-24 08:36:07.576+0800][AbstractCoordinator.java:844] [Consumer clientId=consumer-default-group-1, groupId=default-group] Discovered group coordinator 192.168.123.127:9002 (id: 2147483647 rack: null)
-[INFO ][2022-05-24 08:36:07.576+0800][AbstractCoordinator.java:844] [Consumer clientId=consumer-default-group-2, groupId=default-group] Discovered group coordinator 192.168.123.127:9002 (id: 2147483647 rack: null)
-[INFO ][2022-05-24 08:36:07.580+0800][AbstractCoordinator.java:538] [Consumer clientId=consumer-default-group-2, groupId=default-group] (Re-)joining group
-[INFO ][2022-05-24 08:36:07.580+0800][AbstractCoordinator.java:538] [Consumer clientId=consumer-default-group-1, groupId=default-group] (Re-)joining group
-[INFO ][2022-05-24 08:36:07.714+0800][AbstractCoordinator.java:538] [Consumer clientId=consumer-default-group-1, groupId=default-group] (Re-)joining group
-[INFO ][2022-05-24 08:36:07.722+0800][AbstractCoordinator.java:538] [Consumer clientId=consumer-default-group-2, groupId=default-group] (Re-)joining group
-[INFO ][2022-05-24 08:36:07.932+0800][AbstractCoordinator.java:594] [Consumer clientId=consumer-default-group-1, groupId=default-group] Successfully joined group with generation Generation{generationId=7, memberId='consumer-default-group-1-e68061ba-bb89-4db0-b276-01c4701bf052', protocol='range'}
-[INFO ][2022-05-24 08:36:07.932+0800][AbstractCoordinator.java:594] [Consumer clientId=consumer-default-group-2, groupId=default-group] Successfully joined group with generation Generation{generationId=7, memberId='consumer-default-group-2-e9e38c65-ccce-4c79-9b3e-d887d3935df1', protocol='range'}
-[INFO ][2022-05-24 08:36:07.947+0800][ConsumerCoordinator.java:626] [Consumer clientId=consumer-default-group-2, groupId=default-group] Finished assignment for group at generation 7: {consumer-default-group-2-e9e38c65-ccce-4c79-9b3e-d887d3935df1=Assignment(partitions=[testTopic1-0]), consumer-default-group-1-e68061ba-bb89-4db0-b276-01c4701bf052=Assignment(partitions=[testTopic2-0])}
-[INFO ][2022-05-24 08:36:08.150+0800][AbstractCoordinator.java:754] [Consumer clientId=consumer-default-group-2, groupId=default-group] Successfully synced group in generation Generation{generationId=7, memberId='consumer-default-group-2-e9e38c65-ccce-4c79-9b3e-d887d3935df1', protocol='range'}
-[INFO ][2022-05-24 08:36:08.151+0800][ConsumerCoordinator.java:276] [Consumer clientId=consumer-default-group-2, groupId=default-group] Notifying assignor about the new Assignment(partitions=[testTopic1-0])
-[INFO ][2022-05-24 08:36:08.151+0800][AbstractCoordinator.java:754] [Consumer clientId=consumer-default-group-1, groupId=default-group] Successfully synced group in generation Generation{generationId=7, memberId='consumer-default-group-1-e68061ba-bb89-4db0-b276-01c4701bf052', protocol='range'}
-[INFO ][2022-05-24 08:36:08.152+0800][ConsumerCoordinator.java:276] [Consumer clientId=consumer-default-group-1, groupId=default-group] Notifying assignor about the new Assignment(partitions=[testTopic2-0])
-[INFO ][2022-05-24 08:36:08.154+0800][ConsumerCoordinator.java:288] [Consumer clientId=consumer-default-group-1, groupId=default-group] Adding newly assigned partitions: testTopic2-0
-[INFO ][2022-05-24 08:36:08.154+0800][ConsumerCoordinator.java:288] [Consumer clientId=consumer-default-group-2, groupId=default-group] Adding newly assigned partitions: testTopic1-0
-[INFO ][2022-05-24 08:36:08.202+0800][ConsumerCoordinator.java:820] [Consumer clientId=consumer-default-group-2, groupId=default-group] Setting offset for partition testTopic1-0 to the committed offset FetchPosition{offset=12, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.123.127:9002 (id: 0 rack: null)], epoch=0}}
-[INFO ][2022-05-24 08:36:08.202+0800][ConsumerCoordinator.java:820] [Consumer clientId=consumer-default-group-1, groupId=default-group] Setting offset for partition testTopic2-0 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.123.127:9002 (id: 0 rack: null)], epoch=0}}
-[INFO ][2022-05-24 08:36:08.203+0800][LogAccessor.java:292] default-group: partitions assigned: [testTopic1-0]
-[INFO ][2022-05-24 08:36:08.203+0800][LogAccessor.java:292] default-group: partitions assigned: [testTopic2-0]
-[INFO ][2022-05-24 08:36:41.024+0800][DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ][2022-05-24 08:36:41.024+0800][FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-[INFO ][2022-05-24 08:36:41.025+0800][FrameworkServlet.java:547] Completed initialization in 1 ms
-[INFO ][2022-05-24 08:36:41.043+0800][SecurityInterceptor.java:17] ---mark preHandler----
-[INFO ][2022-05-24 08:36:41.177+0800][FutureUtil.java:202] class=FutureUtil||method=default||futuresSize=0||msg=all future excu done!
-[INFO ][2022-05-24 08:36:41.177+0800][UserController.java:145] callableTask result aaa
-[INFO ][2022-05-24 08:36:41.178+0800][UserController.java:145] callableTask result bbb
-[INFO ][2022-05-24 08:36:41.178+0800][UserController.java:145] callableTask result ccc
-[INFO ][2022-05-24 08:36:41.178+0800][UserController.java:145] callableTask result ddd
-[INFO ][2022-05-24 08:36:41.179+0800][UserController.java:151] runnableTask aaa
-[INFO ][2022-05-24 08:36:41.179+0800][UserController.java:154] runnableTask bbb
-[INFO ][2022-05-24 08:36:41.179+0800][UserController.java:161] runnableTask ddd
-[INFO ][2022-05-24 08:36:41.288+0800][UserController.java:158] runnableTask ccc
-[INFO ][2022-05-24 08:36:41.289+0800][FutureUtil.java:131] class=FutureUtil||method=default||futuresSize=0||msg=all future excu done!
-[INFO ][2022-05-24 08:36:41.289+0800][UserController.java:163] doRunnableTasks over!
-[INFO ][2022-05-24 08:36:44.001+0800][SecurityInterceptor.java:28] ---afterCompletion----
-[INFO ][2022-05-24 08:36:44.099+0800][SecurityInterceptor.java:17] ---mark preHandler----
-[INFO ][2022-05-24 08:36:44.100+0800][SecurityInterceptor.java:23] ---mark postHandle----
-[INFO ][2022-05-24 08:36:44.100+0800][SecurityInterceptor.java:28] ---afterCompletion----
-[INFO ][2022-05-24 08:36:44.108+0800][SecurityInterceptor.java:17] ---mark preHandler----
-[INFO ][2022-05-24 08:36:44.142+0800][SecurityInterceptor.java:23] ---mark postHandle----
-[INFO ][2022-05-24 08:36:44.143+0800][SecurityInterceptor.java:28] ---afterCompletion----
-[INFO ][2022-05-24 08:44:21.102+0800][SecurityInterceptor.java:17] ---mark preHandler----
-[INFO ][2022-05-24 08:44:21.216+0800][FutureUtil.java:202] class=FutureUtil||method=default||futuresSize=0||msg=all future excu done!
-[INFO ][2022-05-24 08:44:21.218+0800][UserController.java:145] callableTask result aaa
-[INFO ][2022-05-24 08:44:21.218+0800][UserController.java:145] callableTask result bbb
-[INFO ][2022-05-24 08:44:21.218+0800][UserController.java:145] callableTask result ccc
-[INFO ][2022-05-24 08:44:21.219+0800][UserController.java:145] callableTask result ddd
-[INFO ][2022-05-24 08:44:21.219+0800][UserController.java:151] runnableTask aaa
-[INFO ][2022-05-24 08:44:21.219+0800][UserController.java:154] runnableTask bbb
-[INFO ][2022-05-24 08:44:21.219+0800][UserController.java:161] runnableTask ddd
-[INFO ][2022-05-24 08:44:21.322+0800][UserController.java:158] runnableTask ccc
-[INFO ][2022-05-24 08:44:21.322+0800][FutureUtil.java:131] class=FutureUtil||method=default||futuresSize=0||msg=all future excu done!
-[INFO ][2022-05-24 08:44:21.322+0800][UserController.java:163] doRunnableTasks over!
-[INFO ][2022-05-24 08:44:21.450+0800][UserController.java:57] i am locked
-[INFO ][2022-05-24 08:44:21.776+0800][SecurityInterceptor.java:23] ---mark postHandle----
-[INFO ][2022-05-24 08:44:21.776+0800][SecurityInterceptor.java:28] ---afterCompletion----
-[INFO ][2022-05-24 08:48:12.617+0800][ConsumerCoordinator.java:307] [Consumer clientId=consumer-default-group-2, groupId=default-group] Revoke previously assigned partitions testTopic1-0
-[INFO ][2022-05-24 08:48:12.617+0800][ConsumerCoordinator.java:307] [Consumer clientId=consumer-default-group-1, groupId=default-group] Revoke previously assigned partitions testTopic2-0
-[INFO ][2022-05-24 08:48:12.618+0800][LogAccessor.java:292] default-group: partitions revoked: [testTopic1-0]
-[INFO ][2022-05-24 08:48:12.618+0800][LogAccessor.java:292] default-group: partitions revoked: [testTopic2-0]
-[INFO ][2022-05-24 08:48:12.619+0800][AbstractCoordinator.java:1038] [Consumer clientId=consumer-default-group-1, groupId=default-group] Member consumer-default-group-1-e68061ba-bb89-4db0-b276-01c4701bf052 sending LeaveGroup request to coordinator 192.168.123.127:9002 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
-[INFO ][2022-05-24 08:48:12.619+0800][AbstractCoordinator.java:1038] [Consumer clientId=consumer-default-group-2, groupId=default-group] Member consumer-default-group-2-e9e38c65-ccce-4c79-9b3e-d887d3935df1 sending LeaveGroup request to coordinator 192.168.123.127:9002 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
-[INFO ][2022-05-24 08:48:12.619+0800][KafkaConsumer.java:1070] [Consumer clientId=consumer-default-group-2, groupId=default-group] Unsubscribed all topics or patterns and assigned partitions
-[INFO ][2022-05-24 08:48:12.619+0800][KafkaConsumer.java:1070] [Consumer clientId=consumer-default-group-1, groupId=default-group] Unsubscribed all topics or patterns and assigned partitions
-[INFO ][2022-05-24 08:48:12.635+0800][Metrics.java:668] Metrics scheduler closed
-[INFO ][2022-05-24 08:48:12.635+0800][Metrics.java:672] Closing reporter org.apache.kafka.common.metrics.JmxReporter
-[INFO ][2022-05-24 08:48:12.636+0800][Metrics.java:678] Metrics reporters closed
-[INFO ][2022-05-24 08:48:12.638+0800][AppInfoParser.java:83] App info kafka.consumer for consumer-default-group-1 unregistered
-[INFO ][2022-05-24 08:48:12.639+0800][LogAccessor.java:292] default-group: Consumer stopped
-[INFO ][2022-05-24 08:48:12.649+0800][Metrics.java:668] Metrics scheduler closed
-[INFO ][2022-05-24 08:48:12.649+0800][Metrics.java:672] Closing reporter org.apache.kafka.common.metrics.JmxReporter
-[INFO ][2022-05-24 08:48:12.649+0800][Metrics.java:678] Metrics reporters closed
-[INFO ][2022-05-24 08:48:12.651+0800][AppInfoParser.java:83] App info kafka.consumer for consumer-default-group-2 unregistered
-[INFO ][2022-05-24 08:48:12.651+0800][LogAccessor.java:292] default-group: Consumer stopped
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[INFO ][2022-06-26 22:23:19.455+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 7396 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:23:19.455+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:24:45.304+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 9740 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:24:45.304+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:24:46.170+0800][ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[INFO ][2022-06-26 22:25:12.664+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 11968 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:25:12.664+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:25:13.482+0800][ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[INFO ][2022-06-26 22:25:52.874+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 11800 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:25:52.874+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:28:33.739+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 7344 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:28:33.739+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:28:35.333+0800][MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+[INFO ][2022-06-26 22:28:35.333+0800][FrameworkServlet.java:525] Initializing Servlet ''
+[INFO ][2022-06-26 22:28:35.333+0800][FrameworkServlet.java:547] Completed initialization in 0 ms
+[INFO ][2022-06-26 22:28:35.364+0800][ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[INFO ][2022-06-26 22:29:29.536+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 3380 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:29:29.536+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:29:31.347+0800][MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+[INFO ][2022-06-26 22:29:31.347+0800][FrameworkServlet.java:525] Initializing Servlet ''
+[INFO ][2022-06-26 22:29:31.347+0800][FrameworkServlet.java:547] Completed initialization in 0 ms
+[INFO ][2022-06-26 22:29:31.378+0800][StartupInfoLogger.java:61] Started UserControllerTest in 2.261 seconds (JVM running for 3.109)
+[INFO ][2022-06-26 22:29:31.503+0800][SecurityInterceptor.java:17] ---mark preHandler----
+[INFO ][2022-06-26 22:29:31.566+0800][UserController.java:67] controller addUser userDto:UserDto(id=1, name=test, age=0, gender=false, pageNum=null, pageSize=null)
+[INFO ][2022-06-26 22:29:31.613+0800][SecurityInterceptor.java:23] ---mark postHandle----
+[INFO ][2022-06-26 22:29:31.613+0800][SecurityInterceptor.java:28] ---afterCompletion----
+[INFO ][2022-06-26 22:29:31.660+0800][UserControllerTest.java:71] {"data":{"id":1,"name":"test","age":0,"gender":false,"createTime":"2022-06-26T14:29:31.410+00:00"},"message":"success","code":0}
+[INFO ][2022-06-26 22:30:21.994+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 2608 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:30:21.994+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:30:23.847+0800][MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+[INFO ][2022-06-26 22:30:23.847+0800][FrameworkServlet.java:525] Initializing Servlet ''
+[INFO ][2022-06-26 22:30:23.847+0800][FrameworkServlet.java:547] Completed initialization in 0 ms
+[INFO ][2022-06-26 22:30:23.880+0800][StartupInfoLogger.java:61] Started UserControllerTest in 2.365 seconds (JVM running for 3.426)
+[INFO ][2022-06-26 22:30:24.005+0800][SecurityInterceptor.java:17] ---mark preHandler----
+[INFO ][2022-06-26 22:30:24.067+0800][UserController.java:67] controller addUser userDto:UserDto(id=1, name=test, age=0, gender=false, pageNum=null, pageSize=null)
+[INFO ][2022-06-26 22:30:24.114+0800][SecurityInterceptor.java:23] ---mark postHandle----
+[INFO ][2022-06-26 22:30:24.114+0800][SecurityInterceptor.java:28] ---afterCompletion----
+[INFO ][2022-06-26 22:30:24.145+0800][UserControllerTest.java:71] {"data":{"id":1,"name":"test","age":0,"gender":false,"createTime":"2022-06-26T14:30:23.911+00:00"},"message":"success","code":0}
+[INFO ][2022-06-26 22:33:39.157+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 3408 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:33:39.157+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:33:41.626+0800][MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+[INFO ][2022-06-26 22:33:41.626+0800][FrameworkServlet.java:525] Initializing Servlet ''
+[INFO ][2022-06-26 22:33:41.626+0800][FrameworkServlet.java:547] Completed initialization in 0 ms
+[INFO ][2022-06-26 22:33:41.657+0800][StartupInfoLogger.java:61] Started UserControllerTest in 2.924 seconds (JVM running for 3.82)
+[INFO ][2022-06-26 22:33:41.782+0800][SecurityInterceptor.java:17] ---mark preHandler----
+[INFO ][2022-06-26 22:33:41.845+0800][UserController.java:67] controller addUser userDto:UserDto(id=1, name=test, age=0, gender=false, pageNum=null, pageSize=null)
+[INFO ][2022-06-26 22:33:41.876+0800][SecurityInterceptor.java:23] ---mark postHandle----
+[INFO ][2022-06-26 22:33:41.876+0800][SecurityInterceptor.java:28] ---afterCompletion----
+[INFO ][2022-06-26 22:33:41.923+0800][UserControllerTest.java:71] {"data":{"id":1,"name":"test","age":0,"gender":false,"createTime":"2022-06-26T14:33:41.688+00:00"},"message":"success","code":0}
+[INFO ][2022-06-26 22:35:41.757+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 12132 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:35:41.757+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:35:43.988+0800][MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+[INFO ][2022-06-26 22:35:43.988+0800][FrameworkServlet.java:525] Initializing Servlet ''
+[INFO ][2022-06-26 22:35:43.988+0800][FrameworkServlet.java:547] Completed initialization in 0 ms
+[INFO ][2022-06-26 22:35:44.008+0800][StartupInfoLogger.java:61] Started UserControllerTest in 2.673 seconds (JVM running for 3.529)
+[INFO ][2022-06-26 22:35:44.149+0800][SecurityInterceptor.java:17] ---mark preHandler----
+[INFO ][2022-06-26 22:35:44.211+0800][UserController.java:67] controller addUser userDto:UserDto(id=1, name=test, age=0, gender=false, pageNum=null, pageSize=null)
+[INFO ][2022-06-26 22:35:44.260+0800][SecurityInterceptor.java:23] ---mark postHandle----
+[INFO ][2022-06-26 22:35:44.260+0800][SecurityInterceptor.java:28] ---afterCompletion----
+[INFO ][2022-06-26 22:56:05.105+0800][StartupInfoLogger.java:55] Starting UserControllerTest2 using Java 1.8.0_321 on fitz-nuc with PID 12272 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:56:05.105+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:56:05.702+0800][ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[INFO ][2022-06-26 22:56:05.749+0800][StartupInfoLogger.java:55] Starting UserControllerTest2 using Java 1.8.0_321 on fitz-nuc with PID 12272 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:56:05.749+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:56:05.860+0800][ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[INFO ][2022-06-26 22:57:28.557+0800][StartupInfoLogger.java:55] Starting UserControllerTest using Java 1.8.0_321 on fitz-nuc with PID 8548 (started by fitz in D:\homework\demo)
+[INFO ][2022-06-26 22:57:28.557+0800][SpringApplication.java:663] The following profiles are active: dev
+[INFO ][2022-06-26 22:57:30.729+0800][MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+[INFO ][2022-06-26 22:57:30.729+0800][FrameworkServlet.java:525] Initializing Servlet ''
+[INFO ][2022-06-26 22:57:30.729+0800][FrameworkServlet.java:547] Completed initialization in 0 ms
+[INFO ][2022-06-26 22:57:30.744+0800][StartupInfoLogger.java:61] Started UserControllerTest in 2.577 seconds (JVM running for 3.455)
+[INFO ][2022-06-26 22:57:30.869+0800][SecurityInterceptor.java:17] ---mark preHandler----
+[INFO ][2022-06-26 22:57:30.947+0800][UserController.java:67] controller addUser userDto:UserDto(id=1, name=test, age=0, gender=false, pageNum=null, pageSize=null)
+[INFO ][2022-06-26 22:57:30.994+0800][SecurityInterceptor.java:23] ---mark postHandle----
+[INFO ][2022-06-26 22:57:30.994+0800][SecurityInterceptor.java:28] ---afterCompletion----
+[INFO ][2022-06-26 22:57:31.026+0800][UserControllerTest.java:74] {"data":{"id":1,"name":"test","age":0,"gender":false,"createTime":"2022-06-26T14:57:30.776+00:00"},"message":"success","code":0}

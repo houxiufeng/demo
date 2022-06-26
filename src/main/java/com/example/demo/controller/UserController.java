@@ -126,6 +126,12 @@ public class UserController {
         return Result.success(users);
     }
 
+    @PostMapping(value = "/mock/user")
+    public Result<UserVo> mockSaveUser(@RequestBody UserDto userDto) {
+        UserVo userVo = Convert.convert(UserVo.class, userDto);
+        return Result.success(userVo);
+    }
+
     private void doCallableTasks() {
         List<String> list = FutureUtil.DEAULT_FUTURE.callableTask(() -> {
                     return "aaa";

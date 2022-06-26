@@ -60,6 +60,12 @@
 			<artifactId>guava</artifactId>
 			<version>23.0</version>
 		</dependency>
+		<!-- 支持mock final class-->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-inline</artifactId>
+			<version>3.3.3</version>
+		</dependency>
 
 		<!--    在使用zookeper的时候一般不使用原生的API，Curator，解决了很多Zookeeper客户端非常底层的细节开发工作，包括连接重连、反复注册Watcher和NodeExistsException异常等等。-->
 		<!--    Curator包含了几个包：-->
